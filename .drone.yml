@@ -1,0 +1,18 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+
+* name: install
+  image: python:3.11
+  commands:
+
+  * pip install pytest
+
+* name: test
+  image: python:3.11
+  commands:
+
+  * pip install pytest
+  * pytest
