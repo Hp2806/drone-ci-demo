@@ -4,15 +4,12 @@ name: default
 
 steps:
 
-* name: install
-  image: python:3.11
-  commands:
+  - name: install
+    image: python:3.11
+    commands:
+      - pip install pytest
 
-  * pip install pytest
-
-* name: test
-  image: python:3.11
-  commands:
-
-  * pip install pytest
-  * pytest
+  - name: test
+    image: python:3.11
+    commands:
+      - pytest
